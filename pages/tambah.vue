@@ -18,16 +18,14 @@ async function simpan() {
 <template>
   <div class="bg-slate-800 h-screen">
     <div class="w-1/3 m-auto mt-10">
-      <h1 class="text-slate-300 font-semibold text-center my-5 text-2xl">
-        Tambah Buku Tamu
-      </h1>
+      <h1 class="text-slate-300 font-semibold text-center my-5 text-2xl">Tambah Buku Tamu</h1>
       <form @submit.prevent="simpan()">
         <div class="relative z-0 mb-6 w-full group">
           <input
             type="text"
             name="email"
             id="email"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
             v-model="nama"
@@ -43,7 +41,7 @@ async function simpan() {
             type="text"
             name="Instansi"
             id="Instansi"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
             v-model="instansi"
@@ -59,7 +57,7 @@ async function simpan() {
             type="text"
             name="alamat"
             id="alamat"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
             v-model="alamat"
@@ -74,11 +72,7 @@ async function simpan() {
         <button
           type="submit"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 float-right mr-16 my-5 transition duration-3000 hover:transform absolute"
-          :class="
-            $data[
-              ClassObject ? 'hover:translate-x-[160px]' : 'hover:translate-x-0'
-            ]
-          "
+          :class="$data[ClassObject ? 'hover:translate-x-[160px]' : 'hover:translate-x-0']"
         >
           Submit
         </button>
