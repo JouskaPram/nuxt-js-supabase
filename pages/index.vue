@@ -1,6 +1,8 @@
 <script setup>
 const supabase = useSupabaseClient();
 const datas = ref();
+const route = useRoute();
+route.params.id;
 async function getdata() {
   const { data, error } = await supabase.from("Pengunjung").select("id,nama,instansi,alamat");
   datas.value = data;
@@ -39,7 +41,7 @@ onMounted(() => {
           <td class="py-4 px-6">{{ visit.alamat }}</td>
           <td class="py-4 px-6">
             <div class="flex">
-              <NuxtLink class="py-2 px-4 text-md bg-blue-500 rounded-full text-center font-semibold text-white mx-3" to="update:visit.id">Update</NuxtLink>
+              <NuxtLink class="py-2 px-4 text-md bg-blue-500 rounded-full text-center font-semibold text-white mx-3" to="/update[id]">Update</NuxtLink>
               <button @click="deleteUser(visit)" class="py-2 px-4 text-md bg-rose-500 rounded-full text-center font-semibold text-white">delete</button>
             </div>
           </td>
